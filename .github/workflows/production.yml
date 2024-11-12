@@ -30,7 +30,7 @@ jobs:
   build-and-push-docker:
     needs: test
     runs-on: ubuntu-latest
-    environment: production # Specifies the environment to use
+    environment: 'production' # Specifies the environment to use
     steps:
       - uses: actions/checkout@v4
       
@@ -47,4 +47,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: woffee/devops_demo:latest  # Change this to your DockerHub username and image name
+          tags: josh336/devops_demo:latest  # Change this to your DockerHub username and image name
